@@ -1,0 +1,103 @@
+---
+layout:     post
+title:      "PHP-调试篇"
+subtitle:   "原生PHP的调试函数,xdebug简介"
+date:       2018-1-24
+author:     "DullCat"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    PHP
+---
+
+
+>对PHP调试的一点小心得,尽量写的全了一些,以让后来者少走写弯路,如有错误,尽请斧正
+- ######基础调试法/打印变量值
+php有几种非常简便的调试,相信大多数人都是知道的,`echo`,`print`,`print_r`,`var_dump`,`var_export`
+这几种都是php自带的调试方法,非常常用,为了便于理解,所以做成了表格
+
+| 方法名|类型| 描述 |返回值|
+| -------------  |:------------:|:-------------:| -----:|
+| echo          | 语言结构 | 只能打印出简单类型变量的值(如int，string)  | 没有返回值|
+| print           | 语言结构 | 只能打印出简单类型变量的值(如int，string)  |  总是返回1|
+| print_r        | 函数        |   可以打印出复杂类型变量的值(如数组、对象）以列表的形式显示，并以array、object开头 |  如果想捕捉 print_r() 的输出，可使用 第二个(return) 参数。若此参数设为 TRUE，print_r() 将不打印结果，而是返回其输出。 |
+| var_dump  | 函数        |  可判断多个变量的类型和长度，并输出变量的数值,更适合调试 | 没有返回值|
+| var_export | 函数        |   和 var_dump() 类似，不同的是其返回的表示是合法的 PHP 代码。|同print_r|
+|dump          | 函数        |   大部分框架自带的调试函数,用于var_dump()友好(格式化)的输出,有些框架可能没有    |  见具体函数|
+- ######基础调试法/打印脚本运行时间
+php的执行速度是非常快速的,往往执行一个脚本的时间不到一秒中,所以如果我们想测试一下执行时间的话,用时间戳就不行了,就要借助一个函数`microtime`它会返回当前时间戳和微秒数,但是他的格式并不是很方便,我们需要写一个函数方便调试
+```
+function get_microtime() 
+{
+      list( $usec, $sec) = explode(" ", microtime());
+      return ((float)$usec + (float)$sec); 
+}
+```
+然后在开始出调用一次,再在结束前调用此,最后用开始的时间减去结束的时间便可以拿到脚本运行时间
+
+- ######基础调试法/打印脚本运行时间
+PHP提供了一个函数可以直接打印出PHP占用的内存量,`memory_get_usage`,但是返回的单位是字节(byte),这非常不方便我们的调试,于是我们需要一个函数转化单位
+```
+function convert($size)
+{
+    $unit=array('b','kb','mb','gb','tb','pb');
+    return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
+}
+```
+
+- ######基础调试法/堆栈追踪(Stack Trace)
+PHP提供可以打印堆栈的函数,所谓(堆栈追踪/堆栈打印)就是打印出程序运行到异常时所加载的文件和执行的函数,有了它我们可以很方便的确定是程序在哪里出了问题(特别是在自己不熟悉的项目内)
+`debug_print_backtrace()`,`debug_backtrace()`
+还可以直接调用异常类中的函数
+```
+$e = new Exception;  
+var_dump($e->getTraceAsString()); 
+```
+当然,,大多数框架都会为你集成这个功能,但是掌握此函数会让你更加灵活的利用堆栈去熟悉,调试代码
+
+- ######基础调试法/打印到文件
+在很多场景下,比如第三方服务的回调,又或者线上调试时,是不能直接打印出来的,所以我们需要一个能让我们确定程序是否正确运行的但是又不直接打印到页面上的函数
+```
+    function mlog(){
+        $args = func_get_args();
+        foreach ($args as $arg){
+            file_put_contents('debug.txt', var_export($arg,true)."\n",FILE_APPEND);
+        }
+    }
+```
+借助于此函数能把变量写到根目录下的debug,txt里面,从而让我们确定程序的执行情况
+
+- ######Xdebug简介
+- - 下载
+Xdebug是PHP的一个拓展,需要手动去安装并开启,Xdebug是有很多个版本的,很多人第一次装都不知道选什么,导致耽误大量时间,其实是有一个更好的办法的https://xdebug.org/wizard.php, Xdebug的官方提供了一个检测工具,只需要打印出PHP的信息`phpinfo()`,然后`ctrl+c`,`ctrl+v`变回给出适合的版本链接,非常方便.
+- - 开启拓展
+下载完成后需要把文件拖入ext文件夹,然后在php.ini文件中加入以下配置,最后勾选拓展,重启服务器,就ok了
+```
+[xdebug]
+zend_extension ="C:/path/php-7.1.7-Win32-VC14-x64/ext/php_xdebug-2.6.0beta1-7.1-vc14-x86_64.dll" (拓展的绝对路径)
+xdebug.remote_enable = 1
+xdebug.profiler_enable_trigger = off
+xdebug.profiler_output_name = "cachegrind.out.%p"
+xdebug.show_local_vars=0
+xdebug.remote_autostart=1
+xdebug.profiler_enable = off (如果需要生成分析文件进行性能分析的话,设置为on,如果不需要记得设置为off哦,不然会影响性能的)
+xdebug.profiler_output_dir ="C:/pach/tmp/xdebug"(生成的分析文件的存放文件夹,不需要可以不设置)
+xdebug.trace_output_dir ="C:/pach/tmp/xdebug"(生成的分析文件的存放文件夹,不需要可以不设置)
+``` 
+- - Xdebug的效果(部分)
+
+1.美化`var_dump`的输出
+
+2. 更简单的打印脚本运行时间,只用一个函数`xdebug_time_index()`便可以拿到脚本运行时间
+
+3. 可以打印内存占用峰值`xdebug_peak_memory_usage()`,但是单位仍是字节
+
+4.可以进行断点调试
+
+5.更方便的查看堆栈
+
+6.可以进行性能分析 (Profile功能)
+
+- - 关于性能分析
+除了性能分析,其他的功能都可以使用PHP原生实现,但是性能分析的工具(wincachegrind)对windows好像并不是很支持,本猫踩了许多天的坑都没踩出来,于是决定以后再补  (:逃~
+
+

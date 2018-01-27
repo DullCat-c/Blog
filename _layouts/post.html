@@ -71,18 +71,18 @@ layout: default
                     {% endif %}
                 </ul>
 
-                {% if site.gitment_username %}
+                {% if site.gitment %}
                 <div id="gitmentContainer"></div>
                 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
                     var gitment = new Gitment({
-                        owner: 'DullCat',
-                        repo: 'https://github.com/DullCat-c/Blog',
+                        owner: 'DullCat-c',
+                        repo: 'DullCat-c/Blog',
                         oauth: {
-                            client_id: '8170219d61a263cd7ae7',
-                            client_secret: '10c610b7108b8b71112a50d9b1ffadd8d8471fae',
-                        },
+                            client_id: '{{ site.gitment_client_id }}',
+                            client_secret: '{{ site.gitment_client_secret }}'
+                        }
                     });
                     gitment.render('gitmentContainer');
                 </script>

@@ -50,7 +50,9 @@ kramdown:
 #disqus_username: DullCat
 
 # Gitment settings
-gitment_username: DullCat
+gitment: true
+gitment_client_id: 8170219d61a263cd7ae7
+gitment_client_secret: 10c610b7108b8b71112a50d9b1ffadd8d8471fae
 
 
 # Analytics settings

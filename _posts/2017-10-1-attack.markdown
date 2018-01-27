@@ -1,0 +1,52 @@
+---
+layout:     post
+title:      "初涉web安全"
+subtitle:   "对web常用的攻击手段的简介,PHP常用防护方法"
+date:       2017-10-1
+author:     "DullCat"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    PHP
+    Security
+---
+
+
+>最近看了些web安全方面的文章,略有心得,写这篇文章来整理下思路,如有错误,恳请斧正
+
+* SQL注入
+
+原理:在web表单中输入恶意sql语句
+
+防御:对用户输入的进行处理,永远不要相信前端js对表单的验证,js是可以禁用的
+
+主要方法:
+1. 使用框架自带方法(此类方法较为简便,因为大部分框架都为你做好了处理) 比如常用的tp框架可以使用数组查询条件,字符串查询预处理机制
+2. 使用PDO或mysqli预处理(此类方法较为繁琐,但是有些框架没有做安全处理或做的不好)
+以下是PDO的示例(mysqli本人也没试过,只是听说可以(逃~)
+```
+$dbh = new PDO("mysql:dbname=test; host=127.0.0.1;charset=utf8", "user", "pass");//连接数据库,并设置本地PDO驱动编码格式
+$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); //禁用模拟预处理(非常重要)
+$dbh->exec("set names 'utf8'"); //设定mysql服务器编码格式
+$sql="select * from test where name = ? and password = ?";//设定预处理语句
+$stmt = $dbh->prepare($sql);//执行预处理
+$stmt->bindParam(1, $id,\PDO::PARAM_INT);//绑定参数
+$exeres = $stmt->execute(); //执行
+$result = $stmt->fetchAll(); //得到结果集
+echo json_encode($result);//输出
+$dbh = null;//取消连接
+```
+* XSS攻击
+
+原理:在web表单中输入恶意js脚本
+
+防御:对用户输入的进行处理,过滤特殊字符
+
+主要方法:
+1. 使用框架自带方法
+比如说tp框架:`I('get.xxx')`
+
+2. 使用PHP过滤函数
+`htmlspecialchars()`转化html字符
+`htmlentities()` 转化html字符 (5.6之后无区别)
+`intval()`获取变量的整数值
+`strip_tags` 从字符串中去除 HTML 和 PHP 标记

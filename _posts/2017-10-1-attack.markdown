@@ -4,7 +4,7 @@ title:      "初涉web安全"
 subtitle:   "对web常用的攻击手段的简介,PHP常用防护方法"
 date:       2017-10-1
 author:     "DullCat"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "http://p398ataio.bkt.clouddn.com/Security.jpg"
 tags:
     PHP
     Security

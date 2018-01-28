@@ -4,7 +4,7 @@ title:      "PHP-调试篇"
 subtitle:   "原生PHP的调试函数,xdebug简介"
 date:       2018-1-24
 author:     "DullCat"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "http://p398ataio.bkt.clouddn.com/php.jpg"
 tags:
     PHP
 ---

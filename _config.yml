@@ -15,9 +15,11 @@ sidebar-avatar: http://p398ataio.bkt.clouddn.com/avatar.jpg  #作者头像
 
 # SNS settings
 RSS: false
-#weibo_username:     huxpro
-zhihu_username:     DullCat.top
 github_username:    DullCat-c
+SO_id:  8680913
+sf_username:  dullcat
+kaiyuan_id:  3731009
+zhihu_username:     DullCat.top
 #twitter_username:  huxpro
 #facebook_username:  huxpro
 

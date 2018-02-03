@@ -9,9 +9,9 @@ baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 #Picture settings
-header-img: http://p398ataio.bkt.clouddn.com/home-bg.jpg      #主页图片
-favicon: http://p398ataio.bkt.clouddn.com/favicon.ico         #网站ico
-sidebar-avatar: http://p398ataio.bkt.clouddn.com/avatar.jpg  #作者头像
+header-img: http://p398ataio.bkt.clouddn.com/show/home-bg.jpg      #主页图片
+favicon: http://p398ataio.bkt.clouddn.com/show/favicon.ico         #网站ico
+sidebar-avatar: http://p398ataio.bkt.clouddn.com/show/avatar.jpg  #作者头像
 
 # SNS settings
 RSS: false
@@ -67,6 +67,9 @@ ba_track_id: 9595473b9357c0f7e60f7fd8f7561e86
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 #ga_domain: huangxuan.me
 
+
+#百度分享
+baidu_share: true
 
 
 # Sidebar settings

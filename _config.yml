@@ -14,7 +14,7 @@ favicon: http://p398ataio.bkt.clouddn.com/show/favicon.ico         #网站ico
 sidebar-avatar: http://p398ataio.bkt.clouddn.com/show/avatar.jpg  #作者头像
 
 # SNS settings
-RSS: false
+RSS: true
 github_username:    DullCat-c
 SO_id:  8680913
 sf_username:  dullcat

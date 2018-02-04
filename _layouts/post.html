@@ -32,6 +32,9 @@ layout: default
     </div>
 </header>
 
+<div id="toc" class="sidebar-inner affix-top" style="float: left;opacity: 1; display: block; transform: initial;"></div>
+
+
 <!-- Post Content -->
 <article>
     <div class="container">
@@ -247,3 +250,9 @@ layout: default
         color: #fff; /* 文字颜色 */
     }
 </style>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#toc').toc();
+    });
+</script>

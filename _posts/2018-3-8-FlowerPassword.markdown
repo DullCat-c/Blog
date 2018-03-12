@@ -4,7 +4,7 @@ title:      "花密--将密码藏在花蕊中"
 subtitle:   "目前最好的密码管理方案"
 date:       2018-3-8
 author:     "DullCat"
-header-img: "http://p398ataio.bkt.clouddn.com/tags/php.jpg"
+header-img: "https://upload-images.jianshu.io/upload_images/10052831-74fa0d8425062e3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
     PHP
 ---
@@ -42,7 +42,7 @@ tags:
 而且密码还不能太简单，太简单的密码是很容易被穷举法给暴力破解的．
 如果人脑能记住,那我们也不会去考虑这么多了，但是人脑记住一个密码肯定是绰绰有余的啊.
 
-![show](http://p398ataio.bkt.clouddn.com/flowerpassword/show.png)
+![show](https://upload-images.jianshu.io/upload_images/10052831-a657804303f12d71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 [花密的官网](https://flowerpassword.com/app/web)
 

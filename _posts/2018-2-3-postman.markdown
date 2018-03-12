@@ -4,7 +4,7 @@ title:      "Postman使用手册"
 subtitle:   "实用的Postman使用方法"
 date:       2018-2-3
 author:     "DullCat"
-header-img: "http://p398ataio.bkt.clouddn.com/tags/tools.jpg"
+header-img: "https://upload-images.jianshu.io/upload_images/10052831-61bf9aab52efd504.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
     Tools
 ---
@@ -33,21 +33,26 @@ HTTPie和cURL的参数无法复用,单元测试过于繁琐
 并且不需要翻墙.
 
 - ###### Send Request
-![send](http://p398ataio.bkt.clouddn.com/postman/request.png)
+![send](https://upload-images.jianshu.io/upload_images/10052831-b738d77232af1aae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 就这么简单你就可以完成一次接口测试
 
 - ###### Create Collection
-![collection](http://p398ataio.bkt.clouddn.com/postman/collection.png)
+![collection](https://upload-images.jianshu.io/upload_images/10052831-c24fc639704d3deb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 这个功能可以让你的测试无限复用,而不必每次都重新输入参数和url
 
 - ###### Create Environment
-![environment](http://p398ataio.bkt.clouddn.com/postman/environment.png)
-![variable](http://p398ataio.bkt.clouddn.com/postman/variable.png)
+![environment](https://upload-images.jianshu.io/upload_images/10052831-875ae1c0f0171dd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![variable](https://upload-images.jianshu.io/upload_images/10052831-ecb6462120a120c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 善于利用环境变量能让你更省事的测试接口
 
 
 - ###### Code Generate
-![code](http://p398ataio.bkt.clouddn.com/postman/code.png)
+![code](https://upload-images.jianshu.io/upload_images/10052831-05cf0644c576b254.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 因为Postman无法快速切换DNS,有时候因为线上线下环境不同而导致的bug,
 需要切换DNS来进行测试,所以我们可以利用此功能将接口信息转化为curl代码,
 在powershell/cmd中执行向线上发的请求.

@@ -4,7 +4,7 @@ title:      "开发自己的composer包"
 subtitle:   "逼格提升之利器,了解composer如何工作"
 date:       2018-2-6
 author:     "DullCat"
-header-img: "http://p398ataio.bkt.clouddn.com/tags/php.jpg"
+header-img: "https://upload-images.jianshu.io/upload_images/10052831-74fa0d8425062e3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
     PHP
 ---
@@ -13,7 +13,8 @@ tags:
 特写此博客,以告后者.
 
 - ###### 创建一个仓库
-![create_repo](http://p398ataio.bkt.clouddn.com/composer/create_repo.png)
+![create_repo](https://upload-images.jianshu.io/upload_images/10052831-1e0cf60a7515ab35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 - ###### 有一个能分享的代码,并且规范他
 你可以按照自己的命名,但是为了便于讲解,我先贴出较为常见的结构:
 ```
@@ -80,23 +81,30 @@ tags:
 
 - ###### 提交给packagist
 1.你要拥有一个[packagist](https://packagist.org/)的账号
+
 2.复制你的存储库URL
-![vcs_repo](http://p398ataio.bkt.clouddn.com/composer/vcs_repo.png)
+
+![vcs_repo](https://upload-images.jianshu.io/upload_images/10052831-247582aa30526e6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 3.submit你的代码
-![submit](http://p398ataio.bkt.clouddn.com/composer/submit.png)
+![submit](https://upload-images.jianshu.io/upload_images/10052831-0ca5258715e14f4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 - ###### 设置自动更新
 1.去到你github项目的主页
 2.点击"Settings"
 3.点击"Integrations & services"
 4.点击"add service",并添加"Packagist"
 5.填写
-![hook](http://p398ataio.bkt.clouddn.com/composer/hook.png)
+![hook](https://upload-images.jianshu.io/upload_images/10052831-467fea23d702723a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![token](http://p398ataio.bkt.clouddn.com/composer/token.png)
+![token](https://upload-images.jianshu.io/upload_images/10052831-af260a7b8174db40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 6.检查Packagist是否正常显示,如过没有,说明设置失败,请检查上述步骤
-![ok](http://p398ataio.bkt.clouddn.com/composer/ok.png)
+![ok](https://upload-images.jianshu.io/upload_images/10052831-44dc27e4b926e2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 - ###### 测试是否能使用composer安装
-![install](http://p398ataio.bkt.clouddn.com/composer/install.png)
+![install](https://upload-images.jianshu.io/upload_images/10052831-01cf5944c0238a58.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 安装的目录为
 ```
 -composer.json里填写的供应商名

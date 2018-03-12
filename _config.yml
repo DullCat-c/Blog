@@ -12,7 +12,7 @@ baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 #主页背景
 header-img: https://upload-images.jianshu.io/upload_images/10052831-691929d2fa3ab6a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 #网站ico
-favicon: favicon.ico
+favicon: /favicon.ico
 #作者头像
 sidebar-avatar: https://upload-images.jianshu.io/upload_images/10052831-6a9cc227aba8bd09.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 #标签背景

@@ -9,9 +9,9 @@ baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 #Picture settings
-header-img: http://p398ataio.bkt.clouddn.com/show/home-bg.jpg      #主页图片
-favicon: http://p398ataio.bkt.clouddn.com/show/favicon.ico         #网站ico
-sidebar-avatar: http://p398ataio.bkt.clouddn.com/show/avatar.jpg  #作者头像
+header-img: //p398ataio.bkt.clouddn.com/show/home-bg.jpg      #主页图片
+favicon: //p398ataio.bkt.clouddn.com/show/favicon.ico         #网站ico
+sidebar-avatar: //p398ataio.bkt.clouddn.com/show/avatar.jpg  #作者头像
 
 # SNS settings
 RSS: true

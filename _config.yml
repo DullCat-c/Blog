@@ -9,9 +9,16 @@ baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 #Picture settings
-header-img: http://p398ataio.bkt.clouddn.com/show/home-bg.jpg      #主页图片
-favicon: http://p398ataio.bkt.clouddn.com/show/favicon.jpg         #网站ico
-sidebar-avatar: http://p398ataio.bkt.clouddn.com/show/avatar.jpg  #作者头像
+#主页背景
+header-img: https://upload-images.jianshu.io/upload_images/10052831-691929d2fa3ab6a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+#网站ico
+favicon: favicon.ico
+#作者头像
+sidebar-avatar: https://upload-images.jianshu.io/upload_images/10052831-6a9cc227aba8bd09.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+#标签背景
+tag-bg: https://upload-images.jianshu.io/upload_images/10052831-b3eed900b9556234.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+#404
+not-found: https://upload-images.jianshu.io/upload_images/10052831-c275692330ed2586.gif?imageMogr2/auto-orient/strip
 
 # SNS settings
 RSS: true
@@ -73,7 +80,7 @@ baidu_share: true
 
 
 #目录树
-toc: false
+toc: true
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.

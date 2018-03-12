@@ -33,8 +33,10 @@ layout: default
 </header>
 
 <!--目录树显示-->
-<div id="toc" class="sidebar-inner affix-top" style="float: left;opacity: 1; display: block; transform: initial;"></div>
-
+<div style="color: #c7fff1;">
+    <div id="toc" class="sidebar-inner affix-top"
+         style="margin-right:5%;: fixed;position: fixed;opacity: 1; display: block; transform: initial;"></div>
+</div>
 
 <!-- Post Content -->
 <article>
@@ -199,6 +201,12 @@ layout: default
             margin-top: -0.1em;
         }
     }
+
+    @media only screen and (max-width: 768px) {
+        #toc {
+            display: none !important;
+        }
+    }
 </style>
 {% endif %}
 
@@ -254,8 +262,20 @@ layout: default
 
 {% if site.toc %}
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('#toc').toc();
     });
+
+    //滑动绑定
+    // $(function() {
+    //     $(window).scroll(function() {
+    //         var scrollHeight = $(document).scrollTop();
+    //         if (scrollHeight > 1170) {
+    //             $('#targetBar').add('lighted');
+    //         } else {
+    //             $('#targetBar').removeClass('lighted');
+    //         }
+    //     });
+    // })
 </script>
 {% endif %}

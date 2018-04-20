@@ -79,8 +79,8 @@ ba_track_id: 9595473b9357c0f7e60f7fd8f7561e86
 baidu_share: true
 
 
-#目录树
-toc: true
+#目录树   #样式不好处理,暂时取消
+toc: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.

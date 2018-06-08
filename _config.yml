@@ -1,9 +1,9 @@
 # Site settings
 title: DullCat's Blog
-SEOTitle: PHP的拥趸 | DullCat's Blog
+SEOTitle: DullCat
 email: cat_cxy@qq.com
 description: "Pragmatism And Open Source Spirit."
-keyword: "PHP,DullCat,DullCat-c"
+keyword: "dullcat,DullCat,DullCat-c"
 url: "http://blog.dullcat.top"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -74,12 +74,14 @@ ba_track_id: 9595473b9357c0f7e60f7fd8f7561e86
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 #ga_domain: huangxuan.me
 
-#百度提交
+#百度验证
 baidu_html: 9q7svJ4q9r
-
 #百度分享
 baidu_share: true
-
+#百度提交
+baidu_push: true
+#google验证
+google_html: 9GPrZD7C9b9mM2M6eIA5TLG3WkIdJzIjyJlRMr-4iHI
 
 #目录树   #样式不好处理,暂时取消
 toc: false

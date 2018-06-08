@@ -24,8 +24,9 @@ not-found: https://upload-images.jianshu.io/upload_images/10052831-c275692330ed2
 RSS: true
 github_username:    DullCat-c
 SO_id:  8680913
-sf_username:  dullcat
-kaiyuan_id:  3731009
+#sf好像做了防反链
+#sf_username:  dullcat
+#kaiyuan_id:  3731009
 zhihu_username:     DullCat.top
 #twitter_username:  huxpro
 #facebook_username:  huxpro
@@ -71,8 +72,8 @@ gitment_client_secret: 10c610b7108b8b71112a50d9b1ffadd8d8471fae
 # Baidu Analytics
 ba_track_id: 9595473b9357c0f7e60f7fd8f7561e86
 # Google Analytics
-#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+ga_track_id: 'UA-120580841-1'            # Format: UA-xxxxxx-xx
+ga_domain: blog.dullcat.top
 
 #百度验证
 baidu_html: 9q7svJ4q9r

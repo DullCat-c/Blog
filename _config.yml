@@ -6,7 +6,7 @@ description: "Pragmatism And Open Source Spirit."
 keyword: "dullcat,DullCat,DullCat-c"
 url: "http://blog.dullcat.top"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
-
+hreflang: "zh-Hans" #google seo 优化
 
 #Picture settings
 #主页背景

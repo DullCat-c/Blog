@@ -4,7 +4,7 @@ title:      "Postman使用手册"
 subtitle:   "实用的Postman使用方法"
 date:       2018-2-3
 author:     "DullCat"
-header-img: "https://upload-images.jianshu.io/upload_images/10052831-61bf9aab52efd504.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://upload-images.jianshu.io/upload_images/10052831-2c7ced673b46ac90.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
     Tools
 ---

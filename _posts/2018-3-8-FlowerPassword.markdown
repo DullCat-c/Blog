@@ -4,9 +4,9 @@ title:      "花密--将密码藏在花蕊中"
 subtitle:   "目前最好的密码管理方案"
 date:       2018-3-8
 author:     "DullCat"
-header-img: "https://upload-images.jianshu.io/upload_images/10052831-74fa0d8425062e3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://upload-images.jianshu.io/upload_images/10052831-2c7ced673b46ac90.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
-    PHP
+    Tools
 ---
    对于密码，想必所有人都不会陌生，现代社会的每一个人几乎都有数不清的密码，
 像是银行卡密码，支付密码，手机密码，社交账号密码，游戏密码，网站密码．

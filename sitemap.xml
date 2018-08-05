@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://blog.dullcat.top/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/about/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/tags/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2018/06/07/httpdownload/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2018/03/08/FlowerPassword/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2018/02/06/composer/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2018/02/03/postman/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2018/01/24/debug/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2017/10/01/attack/</loc>
+  <lastmod>2018-06-11T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.dullcat.top/2018/08/05/weektype/</loc>
+  <lastmod>2018-08-05T05:49:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+</urlset>

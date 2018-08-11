@@ -1,7 +1,6 @@
 ---
 layout: default
-title: "Pay"
-description: ""
+description: "Pay"
 ---
 
 <html>
@@ -18,7 +17,6 @@ description: ""
         img {max-width: 100%;}
         h3 {padding: 10px;}
         .container {text-align: center;}
-        .title {padding: 2em 0;background-color: #fff;}
         .content {padding: 2em 1em;color: #fff;}
         .wepay {background-color: #23ac38;}
         .qq {background-color: #4c97d5;}
@@ -28,12 +26,12 @@ description: ""
 <body class="other">
 <div class="container">
     <div class="title">
-        <img src="static/api/img/qrcode/coin.jpg" alt="DullCat" style="height: 48px;width: 48px;">
+        <img src="/static/api/img/qrcode/coin.jpg" alt="DullCat" style="height: 48px;width: 48px;">
         <h1>打赏本猫</h1>
     </div>
 
     <div class="content" id="content">
-        <img src="static/api/img/qrcode/pay.png" alt="DullCat">
+        <img src="/static/api/img/qrcode/pay.png" alt="DullCat">
         <h3>支持支付宝、微信、QQ客户端扫码付款哦~</h3>
     </div>
 </div>
@@ -55,7 +53,7 @@ description: ""
             type = 'pay.png';
         }
         var html;
-        html = '<img src="static/api/img/qrcode/'+type+'" alt="DullCat"><h3>扫描或长按识别二维码即可哦~</h3>';
+        html = '<img src="/static/api/img/qrcode/'+type+'" alt="DullCat"><h3>扫描或长按识别二维码即可哦~</h3>';
         $('#content').empty().append(html);
     })
 </script>

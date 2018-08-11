@@ -102,6 +102,14 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 pay: true
 #打赏引导语
 pay_sentence: '只要我奔跑的速度够快,就无所谓失去'
+#页面付款码
+pay_qrcode: https://upload-images.jianshu.io/upload_images/10052831-0ac8df3cd9d5ddb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+#QQ付款码
+qq_qrcode: https://upload-images.jianshu.io/upload_images/10052831-975ed86c60dfb4f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+#微信付款码
+wecaht_qrcode: https://upload-images.jianshu.io/upload_images/10052831-70f7e25d665e6b39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+#支付宝付款地址
+alipay_url: HTTPS://QR.ALIPAY.COM/FKX02435ZCDN0CNXMYDDBC?t=1533916539540
 
 
 

@@ -98,6 +98,12 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 
+#是否开起文章打赏功能
+pay: true
+#打赏引导语
+pay_sentence: '只要我奔跑的速度够快,就无所谓失去'
+
+
 
 # Friends
 friends: [

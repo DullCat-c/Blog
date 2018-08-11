@@ -4,7 +4,7 @@ description: "Pay"
 ---
 
     <style type="text/css">
-        * {margin: auto;border: 0;}
+        /** {margin: auto;border: 0;}*/
         /*html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}*/
         body {font-family: -apple-system, SF UI Text, Arial, Microsoft YaHei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;color: #333;}
         img {max-width: 100%;}
@@ -37,7 +37,7 @@ description: "Pay"
         }else if(UA.indexOf('AlipayClient') !== -1){ //支付宝
             location.href = "{{site.alipay_url}}";
         }else{
-            type = "{{site.pay_qrcode}}";
+            return false;
         }
         var html;
         html = '<img src='+type+' alt="{{site.SEOALT}}"><h3>扫描或长按识别二维码即可哦~</h3>';

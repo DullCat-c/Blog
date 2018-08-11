@@ -46,6 +46,8 @@
             type = 'wechat.png';
         }else if(UA.indexOf('AlipayClient') !== -1){ //支付宝
             location.href = 'HTTPS://QR.ALIPAY.COM/FKX02435ZCDN0CNXMYDDBC?t=1533916539540';
+        }else{
+            type = 'pay.png';
         }
         var html;
         html = '<img src="static/api/img/qrcode/'+type+'" alt="DullCat"><h3>扫描或长按识别二维码即可哦~</h3>';

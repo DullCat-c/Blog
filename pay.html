@@ -3,33 +3,24 @@ layout: default
 description: "Pay"
 ---
 
-<!--<head>-->
-    <!--<meta charset="utf-8">-->
-    <!--<meta name="renderer" content="webkit">-->
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <style type="text/css">
-        * {margin: auto;padding: 0;border: 0;}
-        html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}
+        * {margin: auto;border: 0;}
+        /*html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%}*/
         body {font-family: -apple-system, SF UI Text, Arial, Microsoft YaHei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;color: #333;}
         img {max-width: 100%;}
         h3 {padding: 10px;}
         .container {text-align: center;}
         .content {color: #fff;}
-        .wepay {background-color: #23ac38;}
-        .qq {background-color: #4c97d5;}
-        .other {background-color: #ff7055;}
     </style>
-<!--</head>-->
-<body class="other">
+<body class="other" style="background-color: #ff7055;">
 <div class="container">
-    <div class="title">
-        <img src="https://upload-images.jianshu.io/upload_images/10052831-16a19c687465c399.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="DullCat" style="height: 48px;width: 48px;">
+    <div>
+        <img src="https://upload-images.jianshu.io/upload_images/10052831-16a19c687465c399.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="{{ site.SEOALT }}" style="height: 48px;width: 48px;">
         <h1>打赏本猫</h1>
     </div>
 
     <div class="content" id="content">
-        <img src="{{ site.pay_qrcode }}" alt="DullCat">
+        <img src="{{ site.pay_qrcode }}" alt="{{ site.SEOALT }}">
         <h3>支持支付宝、微信、QQ客户端扫码付款哦~</h3>
     </div>
 </div>
@@ -49,7 +40,7 @@ description: "Pay"
             type = "{{site.pay_qrcode}}";
         }
         var html;
-        html = '<img src='+type+' alt="DullCat"><h3>扫描或长按识别二维码即可哦~</h3>';
+        html = '<img src='+type+' alt="{{site.SEOALT}}"><h3>扫描或长按识别二维码即可哦~</h3>';
         $('#content').empty().append(html);
     })
 </script>

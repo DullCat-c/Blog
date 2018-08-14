@@ -9,7 +9,7 @@ SEOTitle: DullCat的PHP博客
 keyword: "dullcat,DullCat,DullCat-c,PHP,PHP博客,PHP开发技巧,PHP代码规范,WEB攻防,PHP代码审计"
 SEODescription : DullCat(一个PHPer)的博客. 主要分享关于PHP语言的开发技巧和防御技巧 , WEB领域中的新技术 , 开发中好用的工具 . 以及记录对互联网行业的思考和分析。
 SEOALT: 'DullCat(一个PHPer)的博客'
-hreflang: "zh-Hans" #google seo 优化
+hreflang: "zh_cn" #google seo 优化
 
 #Picture settings
 #主页背景

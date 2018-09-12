@@ -121,14 +121,17 @@ friends: [
     {
         title: "Hux Blog",
         href: "http://huangxuan.me"
-    },{
+    },
+    {
         title: "鸟哥",
         href: "http://www.laruence.com/"
-    },{
+    },
+    {
         title: "Gcow安全攻防团队",
         href: "http://www.gzsec.org/"
-    },{
+    },
+    {
         title: "未命名安全团队",
-        href: "http://www.unaq.org/"
+        href: "http://123.1.189.6/"
     }
 ]

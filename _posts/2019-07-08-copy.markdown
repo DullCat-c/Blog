@@ -1,0 +1,125 @@
+---
+layout:     post
+title:      "JS-复制功能的填坑之路"
+subtitle:   "原生JS的复制功能"
+date:       2019-07-08
+author:     "DullCat"
+header-img: "https://upload-images.jianshu.io/upload_images/10052831-74fa0d8425062e3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+tags:
+    JS
+---
+
+
+>本来这只是我笔记本上的一个小小的code snippet,但是最近拿出来复用的时候不断发现新的坑,所以干脆写篇博客,以戒后人
+
+- ###### First
+最开始我使用的复制代码只有这么一点
+
+坑:只能用于input和textarea,且不能元素不能被隐藏,且选中值为value属性
+
+
+方法名 | 类型 | 描述 | 返回值
+------------- | ------------- | ------------- | ------------- 
+echo | 语言结构 | 只能打印出简单类型变量的值(如int，string) | 没有返回值
+print | 语言结构 | 只能打印出简单类型变量的值(如int，string) | 总是返回1
+print_r | 函数 | 可以打印出复杂类型变量的值(如数组、对象）以列表的形式显示，并以array、object开头 | 如果想捕捉 print_r() 的输出，可使用 第二个(return) 参数。若此参数设为 TRUE，print_r() 将不打印结果，而是返回其输出。
+var_dump | 函数 | 可判断多个变量的类型和长度，并输出变量的数值,更适合调试 | 没有返回值
+var_export | 函数 | 和 var_dump() 类似，不同的是其返回的表示是合法的 PHP 代码。|同print_r
+dump | 函数  | 大部分框架自带的调试函数,用于var_dump()友好(格式化)的输出,有些框架可能没有 | 见具体函数
+
+- ######  Begin
+最开始我使用的复制代码只有这么一点
+
+坑:只能用于input和textarea,且不能元素不能被隐藏,且选中值为value属性
+```
+var copyDOM = $("#node"); //要复制文字的节点
+copyText .select(); //选择
+document.execCommand("Copy"); //执行复制
+```
+
+- ######  First Pain
+然后我发现在iphone下不起作用,所以在网上找了个这个
+```
+function copyText(text) {
+    //创建节点
+    var copyDOM = document.createElement('input');
+    //要复制的字符串
+    copyDOM.value = text;
+    document.body.appendChild(copyDOM);
+    //选择
+    copyDOM.setSelectionRange(0, copyDOM.value.length);
+    copyDOM.focus();
+    document.execCommand("Copy"); //复制
+    copyDOM.style.display = 'none'; //隐藏创建的节点
+    alert('复制成功！');
+}
+```
+
+- ######  Second Pain
+然后发现在ios10及以上会发生难以忍受的卡顿,随后查阅了大量的资料,无获
+
+```
+const el = document.createElement('input');
+const btn = document.getElementById('btn');
+el.value = '待复制文本';
+el.style.opacity = '0';
+document.body.appendChild(el);
+const editable = el.contentEditable;
+const readOnly = el.readOnly;
+el.contentEditable = true;
+el.readOnly = false;
+const range = document.createRange();
+range.selectNodeContents(el);
+const sel = window.getSelection();
+sel.removeAllRanges();
+sel.addRange(range);
+el.setSelectionRange(0, 999999);
+el.contentEditable = editable;
+el.readOnly = readOnly;
+const ret = document.execCommand('copy');
+el.blur();
+btn.text = ret ? '已复制' : '复制失败';
+```
+
+- ######  Third Pain
+最后发现ios10卡顿的原因就是因为代码里创建的节点,遂改
+
+```
+    function copyText(aim) {
+        var copyDOM = document.getElementById(aim);
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {//区分iPhone设备
+            //这段代码必须放在前面否则无效
+            window.getSelection().removeAllRanges();
+            //要复制文字的节点
+            var range = document.createRange();
+            // 选中需要复制的节点
+            range.selectNode(copyDOM);
+            // 执行选中元素
+            window.getSelection().addRange(range);
+            // 执行 copy 操作
+            document.execCommand('copy');
+            // 移除选中的元素
+            window.getSelection().removeAllRanges();
+        } else {
+            copyDOM.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+        }
+        alert("复制成功")
+    }
+```
+
+
+- ######  End
+后仍觉不满(因为充斥着大量本猫看不懂的函数),再改
+```
+function copyText(aim) {
+    var copyDOM = document.getElementById(aim);
+    // copyDOM.value='want to cope string'; //如果你想要直接复制字符串
+    copyDOM.setSelectionRange(0, copyDOM.value.length);
+    copyDOM.focus();
+    document.execCommand("Copy");
+    alert('复制成功！');
+}
+```
+
+顿时心情舒畅,今后再遇此种需求,可随手解之
